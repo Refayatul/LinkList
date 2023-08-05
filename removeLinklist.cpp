@@ -24,6 +24,15 @@ void printLiskList(Node *head){
     cout<<endl;
 }
 
+void removeLast(Node *&head){
+    Node *current = head;
+    while(current->next->next != NULL){
+        current = current->next; 
+    }
+    current->next = NULL;
+    //cout<<current->data;
+
+}
 
 
 
@@ -40,6 +49,8 @@ int main()
     head->next = new Node(4);
     head->next->next = new Node(5);
     head->next->next->next= new Node(6);
+    printLiskList(head);
+    removeLast(head);
     printLiskList(head);
 
    
