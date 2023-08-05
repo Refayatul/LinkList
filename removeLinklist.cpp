@@ -30,8 +30,12 @@ void removeLast(Node *&head){
         current = current->next; 
     }
     current->next = NULL;
-    //cout<<current->data;
+    cout<<"After removing Last  :";
+}
 
+void removeFirst(Node *&head){
+    head = head->next;
+    cout<<"After removing First :";
 }
 
 
@@ -51,6 +55,8 @@ int main()
     head->next->next->next= new Node(6);
     printLiskList(head);
     removeLast(head);
+    printLiskList(head);
+    removeFirst(head);
     printLiskList(head);
 
    
