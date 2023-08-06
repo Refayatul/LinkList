@@ -69,11 +69,8 @@ int main() {
     head->next->next = new Node(5);
     head->next->next->next = new Node(6);
     head->next->next->next->next = new Node(7);
-
     cout << "Original Linked List: ";
     printLinkedList(head);
-
-    
     removeGivenPosition(head, 3);
     printLinkedList(head);
     removeFirst(head);
